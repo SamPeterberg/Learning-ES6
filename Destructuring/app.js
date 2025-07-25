@@ -1,4 +1,6 @@
 // Destructuring ka matlab hai ek object ya array ke elements ko asani se alag variables mein todna, taki unhe alag-alag use kiya ja sake.
+
+
 // Example 1: Destructuring an object
 const person = { name: "John", age: 30, city: "New York" };
 const { name, age, city } = person;
