@@ -1,50 +1,104 @@
-// Destructuring ka matlab hai ek object ya array ke elements ko asani se alag variables mein todna, taki unhe alag-alag use kiya ja sake.
+// // Destructuring ka matlab hai ek object ya array ke elements ko asani se alag variables mein todna, taki unhe alag-alag use kiya ja sake.
 
 
-// Example 1: Destructuring an object
-const person = { name: "John", age: 30, city: "New York" };
-const { name, age, city } = person;
-console.log(name); // Output: John
-console.log(age);  // Output: 30
-console.log(city); // Output: New York
+// // Example 1: Destructuring an object
+// const person = { name: "John", age: 30, city: "New York" };
+// const { name, age, city } = person;
+// console.log(name); // Output: John
+// console.log(age);  // Output: 30
+// console.log(city); // Output: New York
 
-// Example 2: Destructuring an array
-const numbers = [1, 2, 3];
-const [first, second, third] = numbers;
-console.log(first);  // Output: 1
-console.log(second); // Output: 2
-console.log(third);  // Output: 3
+// // Example 2: Destructuring an array
+// const numbers = [1, 2, 3];
+// const [first, second, third] = numbers;
+// console.log(first);  // Output: 1
+// console.log(second); // Output: 2
+// console.log(third);  // Output: 3
 
-// Example 3: Default values in destructuring
-const { country = "USA" } = person;
-console.log(country); // Output: USA
+// // Example 3: Default values in destructuring
+// const { country = "USA" } = person;
+// console.log(country); // Output: USA
 
-// Example 4: Nested destructuring
-const user = { id: 1, profile: { username: "johndoe", email: "john@example.com" } };
-const { profile: { username, email } } = user;
-console.log(username); // Output: johndoe
-console.log(email);    // Output: john@example.com
+// // Example 4: Nested destructuring
+// const user = { id: 1, profile: { username: "johndoe", email: "john@example.com" } };
+// const { profile: { username, email } } = user;
+// console.log(username); // Output: johndoe
+// console.log(email);    // Output: john@example.com
 
-// Example 5: Destructuring function parameters
-function displayUser({ name, age }) {   
-    console.log(`Name: ${name}, Age: ${age}`);
-}   
-displayUser({ name: "Alice", age: 25 }); // Output: Name: Alice, Age: 25
+// // Example 5: Destructuring function parameters
+// function displayUser({ name, age }) {   
+//     console.log(`Name: ${name}, Age: ${age}`);
+// }   
+// displayUser({ name: "Alice", age: 25 }); // Output: Name: Alice, Age: 25
 
-// Example 6: Destructuring with rest operator
-const [firstNum, ...restNums] = numbers;
-console.log(firstNum); // Output: 1
-console.log(restNums); // Output: [2, 3]
+// // Example 6: Destructuring with rest operator
+// const [firstNum, ...restNums] = numbers;
+// console.log(firstNum); // Output: 1
+// console.log(restNums); // Output: [2, 3]
 
-// Example 7: Destructuring with renaming
-const { name: fullName, age: years } = person;
-console.log(fullName); // Output: John
-console.log(years);   // Output: 30
+// // Example 7: Destructuring with renaming
+// const { name: fullName, age: years } = person;
+// console.log(fullName); // Output: John
+// console.log(years);   // Output: 30
 
-// Example 8: Destructuring in function return values
-function getCoordinates() {
-    return { x: 10, y: 20 };
+// // Example 8: Destructuring in function return values
+// function getCoordinates() {
+//     return { x: 10, y: 20 };
+// }
+// const { x, y } = getCoordinates();
+// console.log(x); // Output: 10
+// console.log(y); // Output: 20
+
+
+// Some Exercises
+
+// Array destructuring 
+// Destructure to get first and third color into variables
+
+// const colors = ["red","green","blue"];
+// const [first, ,third] = colors
+// console.log(first)
+// console.log(third) 
+
+// Swap Variables Using Detructuring
+
+// let a=10,b=20;
+// [a,b]=[b,a]
+// console.log(a);
+// console.log(b);
+
+// Object Destructuring
+// DEstructure to get name and age
+// const user={name:"Sameer",age:23, city:"karachi"}
+// const {name,age}=user
+// console.log(name);
+// console.log(age);  
+
+
+// // destructure with default values
+// const settings = {theme:"dark"}
+// // destructure theme and add fontSize (default :14)
+// const {theme, fontSize = 14}=settings
+// console.log(theme);
+// console.log(fontSize);
+
+// const person = {
+//   name: "Ayesha",
+//   address: {
+//     city: "Lahore",
+//     zip: 54000
+//   }
+// };
+// // Destructure city from the address
+
+// const {address:{city}}=person
+// console.log(city)
+
+
+// 🔸 6. Function Parameter Destructuring
+function displayUser({ name, age }) {
+  // Print name and age
 }
-const { x, y } = getCoordinates();
-console.log(x); // Output: 10
-console.log(y); // Output: 20
+
+const user = { name: "Sara", age: 28 };
+displayUser(user);
